@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
 
-namespace math
+namespace CosmosKernel13
 {
-    public class Kernel : Sys.Kernel
+
+public class Kernel : Sys.Kernel
     {
-        Double ddd = 0.00;
-        mmath m = new mmath();
-        Double dddd = 0.00;
-        protected override void BeforeRun()
+        double dd = 0.00;
+        double ddd = 0.00;
+        double dddd = 0.00;
+    protected override void BeforeRun()
         {
             Console.BackgroundColor = ConsoleColor.Green;
             Console.Clear();
-            Console.WriteLine("add math...");
+            Console.WriteLine("Add calculator.");
+            
         }
 
         protected override void Run()
@@ -22,18 +24,15 @@ namespace math
             Console.Write("Input: ");
             var input = Console.ReadLine();
             Console.Write("Text typed: ");
-            dddd = 0.00;
             try
             {
-
-                dddd= Double.Parse(input);
-
+                ddd = double.Parse(input);
             }
-            catch (Exception e)
+            catch
             {
-                dddd = 0.00;
+                ddd = 0.00;
             }
-            ddd = m.adds(ddd , dddd);
+            dd = MathImpl.ADDS(dd, ddd);
             Console.WriteLine();
         }
     }

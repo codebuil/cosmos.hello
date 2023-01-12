@@ -1,19 +1,18 @@
-﻿using System;
+﻿using IL2CPU.API.Attribs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace math
+[Plug(Target = typeof(global::MathImpl))]
+public class MathImpl
 {
-    internal class mmath
+    public static double ADDS(double value,double value2)
     {
-        public Double adds(Double d,Double dd)
-        {
-            Double ddddd = d + dd;
-            Console.WriteLine(ddddd);
-            return ddddd;
-        }
+        double valuet = value + value2;
+        Console.Write(valuet.ToString());
+            return valuet;
+        
     }
 }
